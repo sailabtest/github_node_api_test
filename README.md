@@ -26,4 +26,7 @@ docker build -t github_test123 .
 ```
 
 * And finally, run the docker image you just created and head over to your browser run localhost:3000 
+ ```
 docker run -d -p 3000:3000 github_test123
+```
+

@@ -1,0 +1,57 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "version": "1.0.0",
+      "title": "Github User Test",
+      "description": "Github repository testing API project",
+      "license": {
+        "name": "MIT",
+        "url": "https://opensource.org/licenses/MIT"
+      }
+    },
+    "host": "localhost:3000",
+    "basePath": "/",
+    "tags": [
+      {
+        "name": "Users",
+        "description": "API based on Github users"
+      }
+    ],
+    "schemes": [
+      "http"
+    ],
+    "consumes": [
+      "application/json"
+    ],
+    "produces": [
+      "application/json"
+    ],
+    "paths": {
+      "/user/{username}": {
+        "get": {
+            "parameters": [
+              {
+                "name": "username",
+                "in": "path",
+                "required": true,
+                "description": "Username of the github user that we want to find",
+                "type": "string"
+              }
+            ],
+            "tags": [
+              "Users"
+            ],
+            "produces": [
+              "application/json"
+            ],
+            "summary": "Retrieve Github user data",
+            "responses": {
+              "200": {
+                "description": "OK"
+              }
+            }
+          }
+      }
+
+    }
+  }
